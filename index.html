@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Throne · 20 Shore Breeze</title>
+  <meta name="description" content="The toilet queue for 20 Shore Breeze. Book it, sit it, flush it.">
+  <meta name="theme-color" content="#BFEAFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E1838" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" id="favicon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Throne">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <div class="sun"></div>
+    <span class="bubble b1"></span><span class="bubble b2"></span><span class="bubble b3"></span>
+    <span class="bubble b4"></span><span class="bubble b5"></span><span class="bubble b6"></span>
+  </div>
+
+  <main class="app">
+    <header class="top">
+      <div class="brand">
+        <span class="brand-mark">🚽</span>
+        <div>
+          <div class="brand-name">The Throne</div>
+          <div class="brand-sub">20 Shore Breeze</div>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button id="sound" class="icon-btn" type="button" aria-label="Sound on">🔊</button>
+        <button id="me" class="me-chip" type="button" aria-label="Switch person"></button>
+      </div>
+    </header>
+
+    <section id="hero" class="hero card" aria-live="polite"></section>
+    <section id="actions" class="actions"></section>
+
+    <section class="card">
+      <h2>The Line <span id="line-count" class="count"></span></h2>
+      <ol id="queue" class="queue"></ol>
+    </section>
+
+    <section class="card">
+      <h2>Throne Awards <span class="hint">last 12h</span></h2>
+      <div id="awards" class="awards"></div>
+    </section>
+
+    <section class="card">
+      <h2>Throne Log</h2>
+      <ul id="feed" class="feed"></ul>
+    </section>
+
+    <footer class="foot">
+      <div id="conn" class="conn" data-state="connecting">Connecting to the house…</div>
+      <details class="tip">
+        <summary>🔔 Get pinged when the throne is free</summary>
+        <p>Keep this page open and allow notifications (button below), or add it to your home screen.</p>
+        <p>For alerts even when the app is closed: install the free <a href="https://ntfy.sh" target="_blank" rel="noopener">ntfy</a> app, tap <b>+</b>, and subscribe to topic <code id="topic"></code>. You'll get a ping every time someone flushes.</p>
+        <button id="notify" class="btn btn-ghost small" type="button">Allow notifications</button>
+      </details>
+      <p class="credit">made with 🧻 for the house</p>
+    </footer>
+  </main>
+
+  <div class="waves" aria-hidden="true">
+    <svg class="wave w1" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0 60 C 240 10 480 110 720 60 S 1200 10 1440 60 V120 H0 Z"/></svg>
+    <svg class="wave w2" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0 70 C 240 120 480 20 720 70 S 1200 120 1440 70 V120 H0 Z"/></svg>
+  </div>
+
+  <div id="picker" class="overlay" hidden>
+    <div class="sheet pop" role="dialog" aria-modal="true" aria-labelledby="picker-title">
+      <button class="sheet-close" type="button" data-close aria-label="Close">✕</button>
+      <div class="sheet-emoji">🚽👀</div>
+      <h2 id="picker-title">Who's about to do their business?</h2>
+      <p>Pick yourself. No impersonating housemates 🙅</p>
+      <div id="people" class="people"></div>
+    </div>
+  </div>
+
+  <div id="dialog" class="overlay" hidden></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="fx" class="fx" aria-hidden="true"></div>
+</body>
+</html>

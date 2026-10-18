@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#BFEAFF"/>
+      <stop offset="1" stop-color="#E8F8FF"/>
+    </linearGradient>
+    <clipPath id="round"><rect width="512" height="512" rx="116"/></clipPath>
+  </defs>
+  <g clip-path="url(#round)">
+    <rect width="512" height="512" fill="url(#sky)"/>
+    <circle cx="430" cy="70" r="80" fill="#FFC93C" opacity="0.9"/>
+    <path d="M0 392 C 85 360 170 424 256 392 S 427 360 512 392 V512 H0Z" fill="#8ADCF3"/>
+    <path d="M0 430 C 85 460 170 400 256 430 S 427 460 512 430 V512 H0Z" fill="#4FC1E3"/>
+    <text x="256" y="372" font-size="250" text-anchor="middle">🚽</text>
+    <text x="262" y="168" font-size="110" text-anchor="middle" transform="rotate(-10 262 130)">👑</text>
+  </g>
+</svg>
