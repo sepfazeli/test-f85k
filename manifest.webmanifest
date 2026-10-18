@@ -2,14 +2,14 @@
   "name": "The Throne · 20 Shore Breeze",
   "short_name": "Throne",
   "description": "The toilet queue for 20 Shore Breeze. Book it, sit it, flush it.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#BFEAFF",
   "theme_color": "#BFEAFF",
   "icons": [
-    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
-    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
   ]
 }

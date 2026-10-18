@@ -308,7 +308,7 @@ async function notify(title, body) {
   if (!('Notification' in window) || Notification.permission !== 'granted') return;
   try {
     const reg = await navigator.serviceWorker?.getRegistration();
-    const opts = { body, icon: '/icon-192.png', tag: 'throne', renotify: true };
+    const opts = { body, icon: 'icon-192.png', tag: 'throne', renotify: true };
     if (reg) await reg.showNotification(title, opts);
     else new Notification(title, opts);
   } catch { /* best effort */ }
@@ -709,7 +709,7 @@ setInterval(() => {
 }, 15000);
 setInterval(tick, 1000);
 
-navigator.serviceWorker?.register('/sw.js').catch(() => {});
+navigator.serviceWorker?.register('sw.js').catch(() => {});
 renderNotifyButton();
 update();
 if (!me) openPicker();
